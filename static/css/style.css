@@ -1,101 +1,146 @@
 /* ===================== Global Body ===================== */
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Chiroyli gradient */
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    transition:  0.5s ease;
 }
 
-/* ===================== Card Box ===================== */
+/* ===================== Card Box — Glassmorphism ===================== */
 .box {
-    background: #ffffff;
-    color: #333;
-    padding: 40px 30px;
-    width: 420px;
-    border-radius: 25px; /* Yumaloq burchaklar */
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4); /* Soft shadow */
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    padding: 36px 30px;
+    width: 380px;
     text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
     animation: fadeIn 0.6s ease;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.35s ease,
+                background 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+/* Shisha yaltiroq effekti */
+.box::before {
+    content: '';
+    position: absolute;
+    top: -35%;
+    left: -35%;
+    width: 70%;
+    height: 70%;
+    background: radial-gradient(circle, rgba(255,255,255,0.10) 0%, transparent 70%);
+    pointer-events: none;
 }
 
 .box:hover {
-    transform: translateY(-10px) scale(1.02); /* Hoverda ko‘tariladi va biroz kattalashadi */
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); /* Shadow intensivlashadi */
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.13);
+    border-color: rgba(255, 255, 255, 0.30);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.4);
 }
 
-/* ===================== Headings & Paragraphs ===================== */
+/* ===================== Headings ===================== */
 .box h1 {
-    margin-bottom: 25px;
-    font-size: 28px;
-    letter-spacing: 1px;
-    color: #2c5364; /* Subtle blue */
+    font-size: 24px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
+/* ===================== Paragraphs ===================== */
 .box p {
     text-align: left;
-    margin: 12px 0;
+    margin: 10px 0;
+    font-size: 14px;
     line-height: 1.6;
-    font-size: 16px;
-    color: #555; /* Soft gray matn */
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.box p span {
+    color: rgba(255, 255, 255, 0.90);
+    font-weight: 500;
 }
 
 /* ===================== Images ===================== */
 .box img {
-    margin-top: 20px;
-    border-radius: 20px;
-    width: 220px;
-    height: 220px;
+    margin: 16px auto 20px;
+    display: block;
+    border-radius: 16px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .box img:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 /* ===================== Buttons ===================== */
 .btn, .edit-btn {
     display: inline-block;
-    margin: 12px 6px;
-    padding: 12px 20px;
-    text-decoration: none;
-    border-radius: 12px;
+    margin: 6px 5px;
+    padding: 11px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
     color: #fff;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
+    text-decoration: none;
     cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    backdrop-filter: blur(8px);
+    transition: background 0.25s ease,
+                transform 0.2s ease,
+                border-color 0.25s ease;
 }
 
+/* Asosiy tugma */
 .btn {
-    background: linear-gradient(135deg, #2c5364, #203a43); /* Primary gradient button */
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.22);
 }
 
+.btn:hover {
+    background: rgba(255, 255, 255, 0.22);
+    border-color: rgba(255, 255, 255, 0.40);
+    transform: translateY(-2px);
+}
+
+/* Tahrirlash tugmasi — yashil */
 .edit-btn {
-    background: linear-gradient(135deg, #27ae60, #2ecc71); /* Green gradient */
-}
-
-.edit-btn:last-of-type {
-    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Red gradient for delete */
-}
-
-/* ===================== Button Hover Effects ===================== */
-.btn:hover, .edit-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(46, 204, 113, 0.20);
+    border: 1px solid rgba(46, 204, 113, 0.35);
 }
 
 .edit-btn:hover {
-    opacity: 0.9;
+    background: rgba(46, 204, 113, 0.35);
+    border-color: rgba(46, 204, 113, 0.60);
+    transform: translateY(-2px);
+}
+
+/* O'chirish tugmasi — qizil */
+.edit-btn:last-of-type {
+    background: rgba(231, 76, 60, 0.20);
+    border: 1px solid rgba(231, 76, 60, 0.35);
+}
+
+.edit-btn:last-of-type:hover {
+    background: rgba(231, 76, 60, 0.35);
+    border-color: rgba(231, 76, 60, 0.60);
+    transform: translateY(-2px);
 }
 
 /* ===================== Fade-in Animation ===================== */
