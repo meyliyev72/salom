@@ -129,8 +129,8 @@ h1 {
     transform: translateY(-2px);
 }
 
-p{
-        margin: 16px auto 20px;
+.rasm{
+    margin: 16px auto 20px;
     display: block;
     border-radius: 16px;
     width: 200px;
@@ -140,7 +140,7 @@ p{
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-p:hover{
+.rasm:hover{
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
