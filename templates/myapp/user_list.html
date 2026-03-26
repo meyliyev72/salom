@@ -14,7 +14,6 @@
         {% for user in users %}
         <div class="card">
             <h2>{{ user.title }} </h2>
-            <p class="rasm">{{user.rasm}}</p>
             {% if user.rasm %}
             <img src="{{user.rasm.url}}" width="200" height="200">
             {% else %}

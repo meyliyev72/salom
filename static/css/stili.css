@@ -129,7 +129,7 @@ h1 {
     transform: translateY(-2px);
 }
 
-.rasm{
+img{
     margin: 16px auto 20px;
     display: block;
     border-radius: 16px;
@@ -140,7 +140,7 @@ h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.rasm:hover{
+img:hover{
     transform: scale(1.05);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
