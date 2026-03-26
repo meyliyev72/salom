@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>User Detail</title>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<div class="box">
+<h1>Ma'lumot</h1>
+
+{% if user %}
+<p><b>Nomi:</b> {{ user.title }}</p>
+<p><b>Masalliqlari:</b> {{ user.ingredients }}</p>
+<p><b>Tayyorlanish usuli:</b> {{ user.instructions }}</p>
+<p><b>Rasmi:</b> {{ user.rasm }}</p>
+{% endif %}
+
+{% if user.rasm %}
+<img src="{{user.rasm.url}}" width="200" height="200">
+{% else %}
+<img src="{% static 'css/images/salom.png' %}">
+{% endif %}
+
+<hr>
+<a class="edit-btn" href="{% url 'user_edit' user.slug %}">Edit ✏️</a>
+<a class="edit-btn" href="{% url 'user_delete' user.slug %}">Delete 🗑</a>
+
+<a class="btn" href="{% url 'user_list' %}">⬅️ Orqaga</a>
+</div>
+
+</body>
+</html>

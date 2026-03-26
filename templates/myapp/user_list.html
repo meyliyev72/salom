@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Users</title>
+<link rel="stylesheet" href="{% static 'css/stili.css' %}">
+</head>
+<body>
+<div class="container">
+    <h1>Taomlar 🥙</h1>
+
+    <div class="cards-list">
+        {% for user in users %}
+        <div class="card">
+            <h2>{{ user.title }} </h2>
+            <a href="{% url 'user_detail' user.slug %}" class="btn">Taomni ko'rish</a>
+        </div>
+        {% empty %}
+        <p>Hozircha taomlar yo'q.</p>
+        {% endfor %}
+    </div>
+    <a style="margin-top: 20px;" href="{% url 'user_create' %}" class="btn">Taom qo'shish!</a>
+</div>
+</body>
+</html> 

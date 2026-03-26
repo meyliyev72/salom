@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Taomlarni o'chirish</title>
+    <link rel="stylesheet" href="{% static 'css/salom.css' %}">
+</head>
+<body>
+    <div class="form-box">
+        <h1>Taomni o'chirish</h1>
+        <form method="post">
+            {% csrf_token %}
+            <p>"{{ object }}" ni o'chirishga aminmisiz?</p>
+            <button type="submit">Ha, o'chirilsin</button>
+            <a href="{% url 'user_list' %}" class="cancel-btn">Yo'q, o'chirilmasin</a>
+        </form>
+    </div>
+</body>
+</html>

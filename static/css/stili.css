@@ -1,0 +1,83 @@
+/* ===================== Global Body ===================== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c54); /* Zamonaviy gradient */
+    color: #fff;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+/* ===================== Container ===================== */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+/* ===================== Heading ===================== */
+h1 {
+    font-size: 42px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+    color: #f0f0f0; /* Soft oq rang */
+}
+
+/* ===================== Cards List ===================== */
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* ===================== Card ===================== */
+.card {
+    background: #ffffff; /* Kartaning asosiy rangi */
+    color: #333; /* Matn rangi */
+    padding: 30px;
+    border-radius: 20px; /* Yumaloq burchaklar */
+    width: 350px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.3); /* Soft shadow */
+    transition: all 0.4s ease; /* Smooth hover effect */
+    text-align: center;
+}
+
+/* Card Hover Effekti */
+.card:hover {
+    transform: translateY(-12px) scale(1.05); /* Biroz kattalashadi va ko‘tariladi */
+    border: 3px solid #1e1e2f; /* Body foniga mos border */
+    box-shadow: 0 25px 50px rgba(0,0,0,0.4); /* Intensiv shadow */
+}
+
+/* ===================== Card Heading ===================== */
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #2c2c54; /* Subtle blue kontrast */
+}
+
+/* ===================== Button ===================== */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #2c2c54, #40407a); /* Gradient background */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+/* Button Hover Effekti */
+.btn:hover {
+    background: linear-gradient(135deg, #40407a, #2c2c54); /* Gradient o‘zgaradi */
+    transform: translateY(-3px);
+    border-color: #fff; /* Hoverda border oq rang */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* Shadow intensivlashadi */
+}

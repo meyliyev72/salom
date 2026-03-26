@@ -1,0 +1,112 @@
+/* ===== Umumiy tana ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ===== Sarlavha ===== */
+h1 {
+    margin-bottom: 30px;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* ===== Taomlar ro'yxati ===== */
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 50px;
+}
+
+ul li {
+    background: rgba(255,255,255,0.1);
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+ul li:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.2);
+}
+
+/* ===== Form box ===== */
+.form-box {
+    background: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 20px;
+    width: 400px;
+    max-width: 90%;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease;
+    text-align: center;
+}
+
+/* ===== Form sarlavhasi ===== */
+.form-box h2 {
+    margin-bottom: 20px;
+    color: #1d2671;
+}
+
+/* ===== Form elementlari ===== */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px rgba(108,92,231,0.5);
+}
+
+/* ===== Button ===== */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #6c5ce7;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+button:hover {
+    background: #4834d4;
+    transform: translateY(-2px);
+}
+
+/* ===== Animatsiya ===== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
