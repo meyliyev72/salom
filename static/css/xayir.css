@@ -68,7 +68,7 @@ body {
     font-size: 14px;
     font-family: inherit;
     outline: none;
-    transition: border-color 0.25s ease, background 0.25s ease;
+    transition: border-color 0.25s ease;
     box-sizing: border-box;
     display: block;
 }
@@ -115,9 +115,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.22);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    transition: background 0.25s ease,
-                border-color 0.25s ease,
-                transform 0.2s ease;
+    transition:  0.25s ease,
+    border-color 0.25s ease,
+    transform 0.2s ease;
 }
 
 /* O'chirish tugmasi */
